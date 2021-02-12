@@ -504,7 +504,7 @@ end = """
             
 divisions_x = int((square_end_x - square_origin_x)/width)
 divisions_y = int((square_end_y - square_origin_y)/height)
-lines_file = open("lines.svg", "w")
+lines_file = open("SimulateMe.svg", "w")
 lines_file.write(start)
 division_length = (square_end_x - square_origin_x)/divisions_x
 
@@ -538,3 +538,41 @@ temp = Template(" messageWrite$letter(2,8,$val1,$val2) )
 for i in range(0,len(msg)):
     print(temp.substitute(letter = msg[i], val1 = 7*i + 1, val2 = 7*i + 7 ))
 """
+
+instructions = """
+1. First of all, visit https://origamisimulator.org/ 
+
+2. Take a moment to appreciate the genius of the people who built this.
+
+3. Enough already? Alrite alrite, maybe try sliding the little bar at the
+bottom of the screen. See what happens when the model is fully folded. 
+
+4. You can even view how tense the paper is, just switch from the "Material"
+view to the "Strain" view. Cool? I bet. Now revert back to the material view.
+
+5. Maybe try rotating the model around for a bit.
+
+6. Alright, awesome, I think you're ready. Refresh the page for now, don't rotate
+anything and make sure that the slider is pointing towards "Flat".
+
+8.See that small "SimulateMe.svg" file? Great, put it somewhere handy.
+
+9. Click on the "File" menu, then click on "Import... (SVG/FOLD)". Import the 
+"SimulateMe.svg". The process might take a while (could take a minute on an 
+ older computer).
+
+10. DO THIS SLOWLY : gradually increase the fold percentage to 60 percent.
+Don't rush it, the paper will start oscillating like crazy otherwise.
+
+11. Click on the "View" menu, then "View Direction >" and then "View Top".
+
+12. Finally, click on "View", then "Rotate Model >" and then on "Rotate Around Z".
+
+13. ...
+
+14. Profit!!
+"""
+
+readme_file = open("INSTRUCTIONS_README.txt","w")
+readme_file.write(instructions)
+readme_file.close()
